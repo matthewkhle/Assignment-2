@@ -143,6 +143,7 @@ for ds in dataSets:
 
             # print('correct: ', correct)
             # print('\n')
+
         # find the lowest accuracy of this model during the 10 runs (training and test set)
         # --> add your Python code here
         tempAccuracy = correct / total
@@ -156,4 +157,4 @@ for ds in dataSets:
         # final accuracy when training on contact_lens_training_2.csv: 0.3
         # final accuracy when training on contact_lens_training_3.csv: 0.4
     # --> add your Python code here
-    print('final accuracy when training on ', ds,': ', accuracy, sep='')
+    print('final accuracy when training on ', ds, ': ', accuracy, sep='')
