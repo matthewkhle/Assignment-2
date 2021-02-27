@@ -1,6 +1,6 @@
 # -------------------------------------------------------------------------
-# AUTHOR: your name
-# FILENAME: title of the source file
+# AUTHOR: Matthew Le
+# FILENAME: naive_bayes.py
 # SPECIFICATION: This program is trained using a training set and naive bayes method and tested with a test set. The predictions with a confidence >= 0.75 are printed.
 # FOR: CS 4200- Assignment #2
 # TIME SPENT: 1.5 Hours (approx)
