@@ -120,6 +120,6 @@ for day in dbTest:
     #print(day[0], 'Predicted:', predicted)
 
     if (predicted[0] > predicted[1]) and (predicted[0] >= 0.75):
-        print(day[0].ljust(15), day[1].ljust(15), day[2].ljust(15), day[3].ljust(15), day[4].ljust(15), 'Yes'.ljust(15), predicted[0], sep="")
+        print(day[0].ljust(15), day[1].ljust(15), day[2].ljust(15), day[3].ljust(15), day[4].ljust(15), 'Yes'.ljust(15), "{:.2f}".format(predicted[0]), sep="")
     elif (predicted[1] > predicted[0]) and (predicted[1] >= 0.75):
-        print(day[0].ljust(15), day[1].ljust(15), day[2].ljust(15), day[3].ljust(15), day[4].ljust(15), 'No'.ljust(15), predicted[1], sep="")         
+        print(day[0].ljust(15), day[1].ljust(15), day[2].ljust(15), day[3].ljust(15), day[4].ljust(15), 'No'.ljust(15), "{:.2f}".format(predicted[1]), sep="")         
