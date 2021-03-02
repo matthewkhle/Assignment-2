@@ -39,9 +39,9 @@ for ds in dataSets:
 
         if instance[0] == 'Young':
             Xtemp.append(1)
-        elif instance[0] == 'Presbyopic':
-            Xtemp.append(2)
         elif instance[0] == 'Prepresbyopic':
+            Xtemp.append(2)
+        elif instance[0] == 'Presbyopic':
             Xtemp.append(3)
 
         if instance[1] == 'Myope':
@@ -64,14 +64,10 @@ for ds in dataSets:
     # transform the original training classes to numbers and add to the vector Y. For instance Yes = 1, No = 2, so Y = [1, 1, 2, 2, ...]
     # --> add your Python code here
     # 1 = Yes, 2 = No
-        Ytemp = 0
-
         if instance[4] == 'Yes':
-            Ytemp = 1
+            Y.append(1)
         elif instance[4] == 'No':
-            Ytemp = 2
-
-        Y.append(Ytemp)
+            Y.append(2)
 
     # loop your training and test tasks 10 times here
     for i in range(10):
@@ -102,9 +98,9 @@ for ds in dataSets:
 
             if data[0] == 'Young':
                 Xtemp.append(1)
-            elif data[0] == 'Presbyopic':
-                Xtemp.append(2)
             elif data[0] == 'Prepresbyopic':
+                Xtemp.append(2)
+            elif data[0] == 'Presbyopic':
                 Xtemp.append(3)
 
             if data[1] == 'Myope':

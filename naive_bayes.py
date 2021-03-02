@@ -32,28 +32,28 @@ with open('weather_training.csv', 'r') as csvfile:
 for day in dbTraining:
     Xtemp = []
 
-    if day[1] == 'Overcast':
+    if day[1] == 'Sunny':
         Xtemp.append(1)
-    elif day[1] == 'Rain':
+    elif day[1] == 'Overcast':
         Xtemp.append(2)
-    elif day[1] == 'Sunny':
+    elif day[1] == 'Rain':
         Xtemp.append(3)
 
     if day[2] == 'Cool':
         Xtemp.append(1)
-    elif day[2] == 'Hot':
-        Xtemp.append(2)
     elif day[2] == 'Mild':
+        Xtemp.append(2)
+    elif day[2] == 'Hot':
         Xtemp.append(3)
 
-    if day[3] == 'High':
+    if day[3] == 'Normal':
         Xtemp.append(1)
-    elif day[3] == 'Normal':
+    elif day[3] == 'High':
         Xtemp.append(2)
 
-    if day[4] == 'Strong':
+    if day[4] == 'Weak':
         Xtemp.append(1)
-    elif day[4] == 'Weak':
+    elif day[4] == 'Strong':
         Xtemp.append(2)
 
     X.append(Xtemp)
@@ -92,28 +92,28 @@ print("Day".ljust(15) + "Outlook".ljust(15) + "Temperature".ljust(15) +
 for day in dbTest:
     Xtemp = []
 
-    if day[1] == 'Overcast':
+    if day[1] == 'Sunny':
         Xtemp.append(1)
-    elif day[1] == 'Rain':
+    elif day[1] == 'Overcast':
         Xtemp.append(2)
-    elif day[1] == 'Sunny':
+    elif day[1] == 'Rain':
         Xtemp.append(3)
 
     if day[2] == 'Cool':
         Xtemp.append(1)
-    elif day[2] == 'Hot':
-        Xtemp.append(2)
     elif day[2] == 'Mild':
+        Xtemp.append(2)
+    elif day[2] == 'Hot':
         Xtemp.append(3)
 
-    if day[3] == 'High':
+    if day[3] == 'Normal':
         Xtemp.append(1)
-    elif day[3] == 'Normal':
+    elif day[3] == 'High':
         Xtemp.append(2)
 
-    if day[4] == 'Strong':
+    if day[4] == 'Weak':
         Xtemp.append(1)
-    elif day[4] == 'Weak':
+    elif day[4] == 'Strong':
         Xtemp.append(2)
 
     predicted = clf.predict_proba([Xtemp])[0]
